@@ -45,4 +45,9 @@ public class WhiskyTrackerApplicationTests {
     public void canGetWhiskyByDistilleryAndAge() {
         List<Whisky> foundWhiskies = whiskyRepository.getWhiskiesByDistilleryAndAge("Rosebank", 12);
     }
+
+    @Test
+    public void canGetDistilleriesWithWhiskyAged12() {
+	    List<Distillery> foundDistilleries = distilleryRepository.getDistilleriesForWhiskeyAged12(12);
+    }
 }
